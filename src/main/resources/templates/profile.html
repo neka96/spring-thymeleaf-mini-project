@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{profile}">Profile</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="page-inner">
+
+		<div class="page-inner" style="min-height: 663px !important">
+			<div class="page-title">
+				<div class="page-breadcrumb">
+					<ol class="breadcrumb">
+						<li><a th:href="@{/dashboard}" th:text="#{home}">Home</a></li>
+						<li class="active" th:text="#{profile}">Profile</li>
+					</ol>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<div class="user-profile-panel panel panel-white">
+							<div class="panel-heading"></div>
+							<div class="panel-body">
+								<img th:src="@{/resources/assets/images/avatar1.jpg}"
+									class="user-profile-image img-circle" alt="">
+								<h4 class="text-center m-t-lg">Neka Keo</h4>
+								<p class="text-center">UI/UX Designer</p>
+								<hr>
+								<ul class="list-unstyled text-center">
+									<li><p>
+											<i class="icon-pointer m-r-xs"></i>Phnom Penh, Cambodia
+										</p></li>
+									<li><p>
+											<i class="icon-envelope-open m-r-xs"></i><a href="#">linux.neka@mail.com</a>
+										</p></li>
+									<li><p>
+											<i class="icon-link m-r-xs"></i><a href="#">www.themeforest.net</a>
+										</p></li>
+								</ul>
+								<hr>
+								<button class="btn btn-info btn-block">
+									<i class="icon-plus m-r-xs"></i>Follow
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+		</div>
+		<div class="page-footer">
+			<p class="no-s">
+				Edit <i class="fa fa-heart"></i> by NEKA
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>
